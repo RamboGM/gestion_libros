@@ -34,8 +34,8 @@ Funcionalidades
 
 - Agregar libros
 - Listar libros
- -Editar libros
- -Eliminar libros
+- Editar libros
+- Eliminar libros
 
 
 ### 5. Publicar en GitHub
