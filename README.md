@@ -16,8 +16,8 @@ Este proyecto es un sistema básico de gestión de libros con funcionalidad CRUD
 
 Crear un entorno virtual e instalar dependencias:
 
-bash
 Copiar código
+```bash
 python -m venv env
 source env/bin/activate  # Linux/MacOS
 .\env\Scripts\activate   # Windows
