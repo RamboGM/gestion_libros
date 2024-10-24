@@ -22,13 +22,14 @@ python -m venv env
 source env/bin/activate  # Linux/MacOS
 .\env\Scripts\activate   # Windows
 pip install -r requirements.txt
+```
 
 Ejecutar el programa:
 
-bash
+```bash
 Copiar código
 python gestor_libros.py
-
+```
 Funcionalidades
 Agregar libros
 Listar libros
