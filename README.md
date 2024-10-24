@@ -31,10 +31,11 @@ Copiar código
 python gestor_libros.py
 ```
 Funcionalidades
-Agregar libros
-Listar libros
-Editar libros
-Eliminar libros
+
+- Agregar libros
+- Listar libros
+ -Editar libros
+ -Eliminar libros
 
 
 ### 5. Publicar en GitHub
