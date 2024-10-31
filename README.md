@@ -14,26 +14,28 @@ Este proyecto es un sistema básico de gestión de libros con funcionalidad CRUD
    git clone https://github.com/tu-usuario/gestor_libros.git
    cd gestor_libros
 
-Crear un entorno virtual e instalar dependencias:
+2. Crear un entorno virtual e instalar dependencias:
 
-bash
-Copiar código
+3. Copiar código
+```bash
 python -m venv env
 source env/bin/activate  # Linux/MacOS
 .\env\Scripts\activate   # Windows
 pip install -r requirements.txt
+```
 
-Ejecutar el programa:
+4. Ejecutar el programa:
 
-bash
+```bash
 Copiar código
 python gestor_libros.py
-
+```
 Funcionalidades
-Agregar libros
-Listar libros
-Editar libros
-Eliminar libros
+
+- Agregar libros
+- Listar libros
+- Editar libros
+- Eliminar libros
 
 
 ### 5. Publicar en GitHub
