@@ -1,63 +1,30 @@
-from biblioteca import Biblioteca
-from libro import Libro
-from tabulate import tabulate
+# gestor_libros.py
 
-def mostrar_menu():
-    print("\n--- Menú de Biblioteca ---")
-    print("1. Agregar libro")
-    print("2. Listar libros")
-    print("3. Editar libro")
-    print("4. Eliminar libro")
-    print("5. Salir")
-    return input("Elige una opción: ")
+class GestorLibros:
+    def __init__(self):
+        self.libros = []
 
-def gestionar_biblioteca():
-    biblioteca = Biblioteca('libros.json')
-    
-    while True:
-        opcion = mostrar_menu()
+    def agregar_libro(self, titulo, autor, anio, genero):
+        libro = {
+            "titulo": titulo,
+            "autor": autor,
+            "anio": anio,
+            "genero": genero
+        }
+        self.libros.append(libro)
 
-        if opcion == '1':
-            titulo = input("Título: ")
-            autor = input("Autor: ")
-            anio = input("Año: ")
-            genero = input("Género: ")
-            libro = Libro(titulo, autor, anio, genero)
-            biblioteca.agregar_libro(libro)
-            print("Libro agregado correctamente.")
-        
-        elif opcion == '2':
-            libros = biblioteca.listar_libros()
-            if libros:
-                print(tabulate(libros, headers="keys"))
-            else:
-                print("No hay libros en la biblioteca.")
-        
-        elif opcion == '3':
-            libros = biblioteca.listar_libros()
-            print(tabulate(libros, headers="keys"))
-            indice = int(input("Elige el índice del libro a editar: "))
-            titulo = input("Nuevo título: ")
-            autor = input("Nuevo autor: ")
-            anio = input("Nuevo año: ")
-            genero = input("Nuevo género: ")
-            nuevo_libro = Libro(titulo, autor, anio, genero)
-            biblioteca.editar_libro(indice, nuevo_libro)
-            print("Libro editado correctamente.")
-        
-        elif opcion == '4':
-            libros = biblioteca.listar_libros()
-            print(tabulate(libros, headers="keys"))
-            indice = int(input("Elige el índice del libro a eliminar: "))
-            biblioteca.eliminar_libro(indice)
-            print("Libro eliminado correctamente.")
-        
-        elif opcion == '5':
-            print("Saliendo del programa...")
-            break
-        
-        else:
-            print("Opción no válida, elige de nuevo.")
+    def modificar_libro(self, indice, titulo, autor, anio, genero):
+        if 0 <= indice < len(self.libros):
+            self.libros[indice] = {
+                "titulo": titulo,
+                "autor": autor,
+                "anio": anio,
+                "genero": genero
+            }
 
-if __name__ == "__main__":
-    gestionar_biblioteca()
+    def eliminar_libro(self, indice):
+        if 0 <= indice < len(self.libros):
+            self.libros.pop(indice)
+
+    def obtener_libros(self):
+        return self.libros
