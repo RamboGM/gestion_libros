@@ -26,9 +26,8 @@ pip install -r requirements.txt
 
 4. Ejecutar el programa:
 
-```bash
-Copiar código
-python gestor_libros.py
+```
+python main.py
 ```
 Funcionalidades
 
