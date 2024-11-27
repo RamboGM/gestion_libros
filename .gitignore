@@ -1,3 +1,4 @@
-env/*
-__pycache__/*
-data/libros.json/*
+env/
+__pycache__/
+*.pyc
+.DS_Store
