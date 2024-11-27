@@ -2,7 +2,7 @@ from app.models.book import Book
 
 class BookRepository:
     def __init__(self):
-        self.books = []  # Lista para simular la persistencia
+        self.books = []
         self.counter = 1
 
     def create(self, book: Book):
